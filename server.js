@@ -29,6 +29,7 @@ app.use((req, res, next)=>{
 //Creo un middleware de mantenimiento
 app.use((req, res, next)=>{
     res.render('maintenance');
+    next();
 });
 
 //Agregamos Middleware. Siempre al final asi que no bypasea al mantenimiento

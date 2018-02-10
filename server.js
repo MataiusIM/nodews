@@ -3,7 +3,7 @@ const hbs = require('hbs'); //Agrego Handlebars
 const fs = require('fs');
 
 //Para que funcione en Heroku lo hago para que ellos asignen el puerto automaticamente
-var port = process.env.port || 3000; 
+var port = process.env.PORT || 3000; 
 
 //Creo una aplicacion Express
 var app = express();

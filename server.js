@@ -2,6 +2,9 @@ const express = require('express'); //Agrego Express
 const hbs = require('hbs'); //Agrego Handlebars
 const fs = require('fs');
 
+//Para que funcione en Heroku lo hago para que ellos asignen el puerto automaticamente
+var port = process.env.port || 3000; 
+
 //Creo una aplicacion Express
 var app = express();
 
@@ -76,6 +79,6 @@ app.get('/error', (req, res) => {
 });
 
 //Indico el puerto en donde escucha la app.
-app.listen(3000, () => {
-    console.log('Server is listening on port 3000')
+app.listen(port, () => {
+    console.log(`Server is listening on port: ${port}`)
 });

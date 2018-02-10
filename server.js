@@ -27,10 +27,10 @@ app.use((req, res, next)=>{
 });
 
 //Creo un middleware de mantenimiento
-app.use((req, res, next)=>{
-    res.render('maintenance');
-    next();
-});
+// app.use((req, res, next)=>{
+//     res.render('maintenance');
+//     next();
+// });
 
 //Agregamos Middleware. Siempre al final asi que no bypasea al mantenimiento
 app.use(express.static(__dirname + '/public')); //Estoy diciendo que aca hay contenido estatico. http://localhost:3000/help.html

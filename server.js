@@ -79,6 +79,17 @@ app.get('/error', (req, res) => {
     });
 });
 
+
+//4) Creo otra ruta a proyectos
+app.get('/projects', (req, res) => {
+    //res.send('Sobre Nosotros');
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page',
+              //currentYear: new Date().getFullYear(), La comento porque registre un Helper con la funcion.
+    });
+});
+
+
 //Indico el puerto en donde escucha la app.
 app.listen(port, () => {
     console.log(`Server is listening on port: ${port}`)
